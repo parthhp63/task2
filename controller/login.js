@@ -9,7 +9,7 @@ const md5 = require('md5');
 var jwt = require('jsonwebtoken');
 
 var cookieParser = require('cookie-parser');
-// route.use(cookieParser());
+router.use(cookieParser());
 
 
 
