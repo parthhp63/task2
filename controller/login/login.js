@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const mysql = require('mysql')
-const conn=require('../config/db');
-const created_time=require('../controller/created_time');
+const conn=require('../../config/db');
+const created_time=require('./created_time');
 
 
 

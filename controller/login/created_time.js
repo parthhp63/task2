@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 
-const connection=require('../config/db');
+const connection=require('../../config/db');
 
 function created_time(req,res){
   connection.connection.query(`select * from user_info`,async function(err,result,fields){

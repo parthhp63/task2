@@ -5,6 +5,12 @@ const mysql = require('mysql');
 const port = 9014;
 const routers = require('./router/route');
 
+app.set('view engine', 'ejs');
+
+
+
+
+app.use(express.static(__dirname ));
 
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended:true}))
