@@ -39,7 +39,6 @@ router.get('/firstp_result',authorization.authorization, (req,res)=>{
 
 router.get('/nextp_result',authorization.authorization,(req,res)=>{
     current+=60;
-    console.log(current)
 
     conn.query(q+"?",[current],(err,result)=>{
 
@@ -47,7 +46,6 @@ router.get('/nextp_result',authorization.authorization,(req,res)=>{
         else{
             let currentno=(current/60)+1;
             res.render('examresult1_28feb.ejs',{data:result,currentno:currentno});
-            // console.log(result);
         }
     })
 })
@@ -67,7 +65,6 @@ router.get('/lastp_result',authorization.authorization, (req,res)=>{
 
 router.get('/previousp_result',authorization.authorization,(req,res)=>{
     current-=60;
-    console.log(current)
 
     conn.query(q+"?",[current],(err,result)=>{
 
@@ -75,14 +72,12 @@ router.get('/previousp_result',authorization.authorization,(req,res)=>{
         else{
             let currentno=(current/60)+1;
             res.render('examresult1_28feb.ejs',{data:result,currentno:currentno});
-            // console.log(result);
         }
         })
 })
 
 router.get('/new/:id',authorization.authorization,(req,res)=>{
     let key=req.params.id;
-    console.log(key);
     const  q= `select student_master_26feb.stu_id,student_master_26feb.fname,student_master_26feb.lname,subject_details_26feb.sub_name as sub_name,
     result_details_26feb.prac_marks as prac_marks, result_details_26feb.theor_marks as theor_marks
     from result_details_26feb
@@ -96,7 +91,6 @@ router.get('/new/:id',authorization.authorization,(req,res)=>{
         else{
             
             res.render('examreport1_28feb.ejs',{data:result})
-            console.log(result);
         }
     })
     

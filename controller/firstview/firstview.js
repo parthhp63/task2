@@ -4,4 +4,4 @@ router.get('/',(req,res)=>{
     res.render('firstview.ejs');
   })
 
-  module.exports=router;
+  module.exports=router;  

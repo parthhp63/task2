@@ -19,17 +19,13 @@ router.post('/combobox',(req,res)=>{
     v=p.split(',')
     name=v[0];
     type=v[1];
-    console.log(p,name,type);
 
   query=`select option_master.name from select_master join option_master on select_master.select_id = option_master.select_id where 
   select_master.name ="${name}";`
 
 
-   console.log(query);
 
   conn.query(query,(err,result,fields)=>{
-    console.log(result);
-    // console.log(result[0].name);
     if(err) throw err;
     else if(result.length==0){
         res.render('combobox_6march.ejs',{user:result,type:type,name:name,result:result,msg:'invalid operation'});

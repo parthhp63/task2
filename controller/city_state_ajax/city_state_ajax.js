@@ -8,6 +8,7 @@ const authorization=require('/home/parth-patil/Node/task2/middleware/authorizati
 router.get("/citystate",(req,res)=>{
     res.render("city_state_ajax.ejs")
 })
+
 // Define endpoint for fetching cities based on state
 router.get('/cities/:state', (req, res) => {
   const state = req.params.state;

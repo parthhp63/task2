@@ -119,7 +119,6 @@ router.get('/lastp_dynamicquery',authorization.authorization, (req,res)=>{
     current=total_records-40;
     console.log(total_records);
     console.log(limit);
-    // console.log(current);
     quer=`${q} limit ?, ?`
     conn.query(quer,[current,limit_dynamicquery],function(err,result,fields){
         if(err) {

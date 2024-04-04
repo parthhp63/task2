@@ -34,18 +34,15 @@ else if(temp >=1){
     current_p=Number(req.query.page_no)||1;
     pageEnd=Math.ceil(total_l/No_of_records_ppage);
 
-    console.log(pageEnd);
     offset=(current_p*No_of_records_ppage)-No_of_records_ppage;
     q=`select * from student_details_26feb where fname like "%${fname}%" ${choice} lname like "%${lname}%" ${choice} city like  "%${city}%" ${choice} state like 
     "%${state}%" limit ? offset ?`;
-    // console.log(q2);
     conn.query(q,[No_of_records_ppage, offset],(err,result)=>{
         if(err) throw err;
         else if(result.length==0){
             res.render('paramater_based_4march.ejs',{user:result, current_p:current_p, pageEnd:pageEnd, message:'Not valid response'});
         }
         else{
-            console.log(q)
             res.render('paramater_based_4march.ejs',{user:result, current_p:current_p, pageEnd:pageEnd,message:''});
         }
     })
@@ -56,11 +53,8 @@ else if(temp >=1){
 
 router.post('/home',(req,res)=>{
     get_id=req.body.id;
-    console.log(get_id);
     if(req.body.id){
     q=`select * from student_details_26feb where stu_id in (${get_id})`;
-    console.log(q);
-    // console.log(q2);
     conn.query(q,[No_of_records_ppage, offset],(err,result)=>{
         if(err) throw err;
         else if(result.length==0){
@@ -73,8 +67,7 @@ router.post('/home',(req,res)=>{
     }
     else{
         q=`select * from student_details_26feb `;
-        console.log(q);
-        // console.log(q2);
+
         conn.query(q,[No_of_records_ppage, offset],(err,result)=>{
             if(err) throw err;
             else if(result.length==0){
@@ -95,24 +88,19 @@ router.post('/home/showall', (req,res)=>{
     state=req.body.state;
     choice=req.body.choice;
 
-    console.log(fname,lname,city,state,choice);
 
     q4=`select * from student_details_26feb where fname like "%${fname}%" ${choice} lname like "%${lname}%" ${choice} city like  "%${city}%" ${choice} state like 
       "%${state}%"`
-    console.log(q4);
     conn.query(q4,(err,result)=>{
         total_l=result.length;
-        console.log(total_l);
 
       current_p=Number(req.query.page_no)||1;
 
       pageEnd=Math.ceil(total_l/No_of_records_ppage);
-       console.log(pageEnd);
         offset=(current_p*No_of_records_ppage)-No_of_records_ppage;
 
         q=`select * from student_details_26feb where fname like "%${fname}%" ${choice} lname like "%${lname}%" ${choice} city like  "%${city}%" ${choice} state like 
         "%${state}%" limit ? offset ?`;
-        console.log(q);
 
         conn.query(q,[No_of_records_ppage, offset],(err,result)=>{
             if(err) throw err;
