@@ -21,37 +21,37 @@ router.post('/delimeter',(req,res)=>{
     var y=p.replace(/(?=[$-/:-?{-~!"^_`\[\]])/gi,",");
     var o=y.split(',');
     let val;
-   var fname=[];
-   var lname=[];
-   var email=[];
-   var mobile=[];
-   var state=[];
-   var city=[];
+     const fname=[];
+     const lname=[];
+     const email=[];
+     const mobile=[];
+     const state=[];
+     const city=[];
     for(let i=1;i<o.length;i++){
         if(o[i].startsWith('_')){
             val=o[i].replace('_','');
-            fname.push(val);
+            fname.push(val.trim());
         }
         if(o[i].startsWith('^')){
             val=o[i].replace('^','');
-            lname.push(val);
+            lname.push(val.trim());
 
         }
         if(o[i].startsWith('$')){
             val=o[i].replace('$','');
-            email.push(val);
+            email.push(val.trim());
         }
         if(o[i].startsWith(';')){
             val=o[i].replace(';','');
-            mobile.push(val);
+            mobile.push(val.trim());
         }
         if(o[i].startsWith('}')){
             val=o[i].replace('}','');
-            state.push(val);
+            state.push(val.trim());
         }
         if(o[i].startsWith('{')){
             val=o[i].replace('{','');
-            city.push(val);
+            city.push(val.trim());
         }
         }
 

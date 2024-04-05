@@ -2,7 +2,7 @@ const router = require("express").Router();
 const mysql = require('mysql')
 const conn=require('../../config/db');
 const created_time=require('./created_time');
-
+const retry=require('/home/parth-patil/Node/task2/middleware/retry.js')
 
 
 const md5 = require('md5');
@@ -13,7 +13,7 @@ router.use(cookieParser());
 
 
 
-router.get('/register',(req,res)=>{
+router.get('/register',retry.retry,(req,res)=>{
     res.render('register.ejs')
     })
     
@@ -69,7 +69,7 @@ router.get('/register',(req,res)=>{
       return res;
     }
     
-    router.get('/passwd/:actcode',(req,res)=>{
+    router.get('/passwd/:actcode',retry.retry,(req,res)=>{
       q15=`select count(*) as counter from user_info where activation='${req.params.actcode}'`
       conn.query(q15, (err, result) => {
         if (err) throw err;
@@ -109,7 +109,7 @@ router.get('/register',(req,res)=>{
     
     //  Login..
     
-    router.get('/login',(req,res)=>{
+    router.get('/login',retry.retry,(req,res)=>{
     res.render('login.ejs')
     })
     

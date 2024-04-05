@@ -4,15 +4,15 @@ const authorization=require('/home/parth-patil/Node/task2/middleware/authorizati
 // Dyanamic Query search 29feb...
 
 
-var q;
-var total_records;
-var limit_dynamicquery =40;
-var quer;
-var field_name;
-var quer2;
+let q;
+let total_records;
+let limit_dynamicquery =40;
+let quer;
+let field_name;
+let quer2;
 
 
-var q2;
+let q2;
 
 
 router.get('/dynamicquery',authorization.authorization,(req,res)=>{
