@@ -288,7 +288,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-3">
-                                <input type="checkbox" name="lang1" value="hindi" id="hindil">
+                                <input type="checkbox" name="lang" value="hindi" id="hindil">
                                 <label for="lang1"> Hindi</label>
                             </div>
                             <div class="col-md-3">
@@ -307,7 +307,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-3">
-                                <input type="checkbox" name="lang2" value="english"  id="engl">
+                                <input type="checkbox" name="lang" value="english"  id="engl">
                                 <label for="lang2"> English</label>
                             </div>
                             <div class="col-md-3">
@@ -327,7 +327,7 @@
 
                         <div class="row">
                             <div class="col-md-3">
-                                <input type="checkbox" name="lang3" value="gujarti" id="gujl">
+                                <input type="checkbox" name="lang" value="gujarti" id="gujl">
                                 <label for="lang3"> Gujarati</label>
                             </div>
                             <div class="col-md-3">
@@ -973,6 +973,679 @@
 
                     // return true;
                     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    // var remove=0;
+                    // var flag=0;
+                    // function  datavalidation(){
+                    //        let err=[];
+                    //         err.push(blank_validation());
+                        //     err.push(phone_validate());
+                        //     err.push(validate_email());
+                        //     err.push(zip_validation());
+                        //    err.push(dob_validate());  
+                        //    err.push(gender());      
+                        //    err.push(ssc_validation());
+                        //    err.push(hsc_validation());
+                        //    err.push(bc_validation());
+                        //    err.push(ms_validation());
+                        //    err.push(experience1()); 
+                        //    err.push(experience2()); 
+                        //    err.push(language_checkbox1());
+                        //    err.push(language_checkbox2());
+                        //    err.push(language_checkbox3());
+                        //     err.push(tech1());
+                        //     err.push(tech2());
+                        //     err.push(tech3());
+                        //     err.push(tech4());
+                        //    err.push(ref1_validation());
+                        //    err.push(ref2_validation());
+                        //    err.push(ref3_validation());
+
+                //         blank_validation();
+ 
+
+
+
+                //             if (flag==1){
+                //                 return false;
+                //             }
+                //             else{
+                //             return true;}
+                //         }
+
+
+                //     function blank_validation(){
+                //         var validate=['first_name','last_name','designation_basic','address_1','phone','city','notice_period','expected_ctc','current_ctc'];
+                //         var display=['First Name', 'Last Name','Designation','Address','Phone','City','Notice Period', 'Expected CTC','Current CTC'];
+                //         // console.log(validate.length);
+                    
+                //     for(var i=0;i<validate.length;i++){
+                //         // console.log(validate);
+                //          str=document.getElementById(validate[i]);
+                //         //  console.log(str);
+                //          if(str.value.trim()=='' || str.value.trim()==null){
+                //             document.getElementsByClassName('validate_of')[i].innerHTML= display[i]+" cannot be blank";
+                //             return false;
+                //         }                           
+                //         // else{ 
+                //         //     document.getElementsByClassName('validate_of')[i].innerHTML="";
+                //         //     return true;
+                //         // }
+                //     }
+                //     // return true;
+                //     }
+
+                    
+                //     function phone_validate(){
+                //         // console.log('function is calling')
+                //                var p=document.getElementById('phone').value;
+                //                var phoneno = /^\d{10}$/;
+                //                console.log('sdsdvsd',p);
+                //                if((!p.match(phoneno))) {
+                //                     document.getElementById('phone_validation').innerHTML= 'Please enter the Phone no in 10 digit';
+                //                     flag=1;
+                //                  }
+                //                  else if((p.match(phoneno))) {
+                //                     document.getElementById('phone_validation').innerHTML= '';
+                //                     flag=0;
+                //                  }
+                //                 }
+
+
+                //     function validate_email(){
+                //                 var em=document.getElementById('email').value;
+                //                 // console.log(em);
+                //                 var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                //                  if (!em.match(validRegex)) {
+                //                     document.getElementById('email_validation').innerHTML= 'Please enter the email in proper format';
+                //                     flag=1;
+                //                 }
+                //                 else{
+                //                     flag=0;
+                //                 }
+                //             }
+
+                // function zip_validation(){
+                //         var zip=document.getElementById('zip_code').value;
+                //         // console.log(zip)
+                //         regexp = /^\d{6}$/;
+                //         if (!zip.match(regexp)) {
+                //         document.getElementById('zip_validation').innerHTML= 'Please enter the Zip Code in 6 digit';
+                //             flag=1;
+                //     }
+                //     else if(zip.match(regexp)) {
+                //         document.getElementById('zip_validation').innerHTML= '';
+                //         flag=0;
+                        
+                //     }}
+                              
+                // function dob_validate(){
+                //     var dob_validate=document.getElementById('dob').value;
+                //     var dateformat = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+                //     if (!dob_validate.match(dateformat)) {
+                //     document.getElementById('validate_dob').innerHTML= 'Please enter the Date of birth in dd/mm/yyyy or dd-mm-yyyy format';
+                //         flag=1;
+                //  }
+                //  else if(dob_validate.match(dateformat)) {
+                //     document.getElementById('validate_dob').innerHTML= '';
+                //     flag=0;
+                //  }
+                // }   
+
+                // function gender(){
+                //         var chk=['gender'];
+                //         let arr=document.getElementsByName('gender');
+                        
+                //     }
+        
+//---------------------Education Details---------------------------------------
+   
+// let ssc=['board_name_ssc','passing_year_ssc','percentage_ssc'];
+//        let hsc=['board_name_hsc','passing_year_hsc','percentage_hsc'];
+//        let bc=['board_name_bc','passing_year_bc','percentage_bc'];
+//        let ms=['board_name_ms','passing_year_ms','percentage_ms'];
+
+//     function ssc_validation(){
+//        for(let i=0; i<ssc.length;i++){
+//         if(document.getElementById(ssc[i]).value!==''){
+//             for(let j=0;j<ssc.length;j++){
+//                 if(document.getElementById(ssc[j]).value=='' ||document.getElementById(ssc[j]).value== null ){
+                   
+//                     document.getElementsByClassName('ssc')[j].innerHTML='Required Field';
+//                     flag=1;
+//                 }
+//                else{
+//                 flag=0;
+//                }
+//             }
+//         }
+//        }
+//     }
+
+//        function hsc_validation(){
+//        for(let i=0; i<hsc.length;i++){
+//         if(document.getElementById(hsc[i]).value!==''){
+//             for(let j=0;j<hsc.length;j++){
+//                 if(document.getElementById(hsc[j]).value=='' ||document.getElementById(hsc[j]).value== null ){
+//                     document.getElementsByClassName('hsc')[j].innerHTML='Required Field';
+//                     flag=1;
+//                 }
+//                 else{
+//                 flag=0;
+//                }
+//             }
+//         }
+//        }
+//     }
+
+//     function bc_validation(){
+//        for(let i=0; i<bc.length;i++){
+//         if(document.getElementById(bc[i]).value!==''){
+//             for(let j=0;j<bc.length;j++){
+//                 if(document.getElementById(bc[j]).value=='' ||document.getElementById(bc[j]).value== null ){
+//                     document.getElementsByClassName('bc')[j].innerHTML='Required Field';
+//                     flag=1;
+//                 }
+//                 else{
+//                 flag=0;
+//                }
+//             }
+//         }
+//        }
+//     }
+
+
+//     function ms_validation(){
+//        for(let i=0; i<ms.length;i++){
+//         if(document.getElementById(ms[i]).value!==''){
+//             for(let j=0;j<ms.length;j++){
+//                 if(document.getElementById(ms[j]).value=='' ||document.getElementById(ms[j]).value== null ){
+//                     document.getElementsByClassName('ms')[j].innerHTML='Required Field';
+//                     flag=1;
+//                 }
+//                 else{
+//                 flag=0;
+//                }
+//             }
+//         }
+//        }
+//     }  
+    
+    // function education_number(){
+    //     var education_no=['passing_year_ssc','percentage_ssc','passing_year_hsc','percentage_hsc','passing_year_bc','percentage_bc','passing_year_ms','percentage_ms'];
+
+    //     for(let i=0;i<education_no.length;i++){
+    //         if(education_no[i]=='passing_year_ssc' || education_no[i]=='percentage_ssc' || education_no[i]=='passing_year_hsc' || education_no[i]=='percentage_hsc' || education_no[i]=='passing_year_bc' || education_no[i]=='percentage_bc' || education_no[i]=='passing_year_ms' || education_no[i]=='percentage_ms' ){
+            
+    //             var edu_no=document.getElementById(education_no[i]).value;
+                        
+    //             if (!isNaN(edu_no)){
+    //                 document.getElementsByClassName('eduno_validation')[i].innerHTML= 'Enter in proper format';
+    //                     }
+    //                 }
+    //                 flag=1;
+    //         }
+    // }
+        
+ 
+    //-------------- Work Experience------------------------------------------------
+        // let exp1=["company_name1","designation1","from1","to1"]
+        // let exp2=["company_name2","designation2","from2","to2"]
+
+        // function experience1(){
+        //     for(let i=0;i<exp1.length;i++){
+        //         if(document.getElementById(exp1[i]).value!==''){
+        //     for(let j=0;j<exp1.length;j++){
+        //         if(document.getElementById(exp1[j]).value=='' ||document.getElementById(exp1[j]).value== null ){
+        //             document.getElementsByClassName('experience_validation')[j].innerHTML='Required Field';
+        //             flag=1;
+        //         }
+        //         else{
+        //             flag=0;
+        //         }
+        //     }
+        // }
+        //     }
+
+        // }
+
+
+        // function experience2(){
+        //     for(let i=0;i<exp2.length;i++){
+        //         if(document.getElementById(exp2[i]).value!==''){
+        //     for(let j=0;j<exp2.length;j++){
+        //         if(document.getElementById(exp2[j]).value=='' ||document.getElementById(exp2[j]).value== null ){
+        //             document.getElementsByClassName('experience_validation1')[j].innerHTML='Required Field';
+        //             flag=1;
+        //         }
+        //         else{
+        //             flag=0;
+        //         }
+        //     }
+        // }
+        //     }
+
+        // }
+
+
+
+
+    
+    //-------------Language Known------------------------------------------ 
+    //    function language_checkbox1(){
+    //     let opt1=document.getElementById('hindil');
+    //      if(opt1.checked){
+    //         let read1=document.getElementById('read1');
+    //         let write1=document.getElementById('write1');
+    //         let speak1=document.getElementById('speak1');
+
+    //         if(!read1.checked && !write1.checked && !speak1.checked){
+    //             document.getElementById('language_check1').innerHTML=`Please select the option for Hindi`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         }     
+    //      }
+
+    //      else if(read1.checked || write1.checked || speak1.checked){
+    //         if(!opt1.checked){
+    //             document.getElementById('language_check1').innerHTML=`Please select the  option for read,write,speak`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         }     
+    //      }
+    // }
+
+    //     function language_checkbox2(){
+    //         let opt2=document.getElementById('engl');
+    //         if(opt2.checked){
+    //         let read2=document.getElementById('read2');
+    //         let write2=document.getElementById('write2');
+    //         let speak2=document.getElementById('speak2');
+
+    //         if(!read2.checked && !write2.checked && !speak2.checked){
+    //             document.getElementById('language_check2').innerHTML=`Please select the option for English`;
+    //             flag=1;
+    //         }              else{
+    //             flag=0;
+    //         }  
+    //      }
+
+    //      else if(read2.checked || write2.checked || speak2.checked){
+    //         if(!opt2.checked){
+    //             document.getElementById('language_check2').innerHTML=`Please select the  option for read,write,speak`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         }  
+    //      }
+    //     }
+
+    //     function language_checkbox3(){
+    //         let opt3=document.getElementById('gujl');
+    //          if(opt3.checked){
+    //         let read3=document.getElementById('read3');
+    //         let write3=document.getElementById('write3');
+    //         let speak3=document.getElementById('speak3');
+
+    //         if(!read3.checked && !write3.checked && !speak3.checked){
+    //             document.getElementById('language_check3').innerHTML=`Please select the option for Gujarati`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         }  
+    //      }
+    //      else if(read3.checked || write3.checked || speak3.checked){
+    //         if(!opt3.checked){
+    //             document.getElementById('language_check3').innerHTML=`Please select the  option for read,write,speak`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         }  
+    //      }
+       
+    //     }
+
+    //---------------Technologies-----------------------------
+    // function tech1(){
+    //     let lan1=document.getElementById('php');
+    //     if(lan1.checked){
+    //         let beg1=document.getElementById('beginer1');
+    //         let med1=document.getElementById('mediator1');
+    //         let exp1=document.getElementById('expert1');
+    //         if(!beg1.checked && !med1.checked && !exp1.checked){
+    //             document.getElementById('tech1').innerHTML=`Please select the option for PHP`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         } 
+    //     }
+
+    //      let radio1=document.forms['myform']['tech1'].value;
+    //      console.log(radio1);
+    //      if(radio1!=''){
+    //         if(!lan1.checked){
+    //             document.getElementById('tech1').innerHTML=`Please select the Technology option for this field`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         } 
+    //      }
+
+    //     // else if(beg1.checked || med1.checked || exp1.checked){
+    //     //     if(!lan1.checked){
+    //     //         document.getElementById('tech1').innerHTML=`Please select the  option Technology option for this field`;
+    //     //         return false;
+    //     //     }
+    //     //  }
+    // }
+
+    // function tech2(){
+    //     let lan2=document.getElementById('mysql');
+    //     if(lan2.checked){
+    //         let beg2=document.getElementById('beginer2');
+    //         let med2=document.getElementById('mediator2');
+    //         let exp2=document.getElementById('expert2');
+    //         if(!beg2.checked && !med2.checked && !exp2.checked){
+    //             document.getElementById('tech2').innerHTML=`Please select the option for MYSQL`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         } 
+    //     }
+
+    //     let radio2=document.forms['myform']['tech2'].value;
+    //     //  console.log(radio2);
+    //      if(radio2!=''){
+    //         if(!lan2.checked){
+    //             document.getElementById('tech2').innerHTML=`Please select the Technology option for this field`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         } 
+    //      }
+    // }
+
+    // function tech3(){
+    //     let lan3=document.getElementById('laravel');
+    //     if(lan3.checked){
+    //         let beg3=document.getElementById('beginer3');
+    //         let med3=document.getElementById('mediator3');
+    //         let exp3=document.getElementById('expert3');
+    //         if(!beg3.checked && !med3.checked && !exp3.checked){
+    //             document.getElementById('tech3').innerHTML=`Please select the option for Laravel`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         } 
+    //     }
+        
+
+    //     let radio3=document.forms['myform']['tech3'].value;
+    //     //  console.log(radio2);
+    //      if(radio3!=''){
+    //         if(!lan3.checked){
+    //             document.getElementById('tech3').innerHTML=`Please select the Technology option for this field`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         } 
+    //      }
+    // }
+
+    // function tech4(){
+    //     let lan4=document.getElementById('oracle');
+    //     if(lan4.checked){
+    //         let beg4=document.getElementById('beginer4');
+    //         let med4=document.getElementById('mediator4');
+    //         let exp4=document.getElementById('expert4');
+    //         if(!beg4.checked && !med4.checked && !exp4.checked){
+    //             document.getElementById('tech4').innerHTML=`Please select the option for Oracle`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         } 
+    //     }
+
+
+    //     let radio4=document.forms['myform']['tech4'].value;
+    //     //  console.log(radio2);
+    //      if(radio4!=''){
+    //         if(!lan4.checked){
+    //             document.getElementById('tech4').innerHTML=`Please select the Technology option for this field`;
+    //             flag=1;
+    //         }
+    //         else{
+    //             flag=0;
+    //         } 
+    //      }
+    // }
+
+
+
+    //----------------- Refrence--------------------------------------
+
+    // let ref1=['name1','contact_no1','relation1'];
+    // let ref2=['name2','contact_no2','relation2'];
+    // let ref3=['name3','contact_no3','relation3'];
+
+    //     function ref1_validation(){
+    //    for(let i=0; i<ref1.length;i++){
+    //     if(document.getElementById(ref1[i]).value!==''){
+    //         for(let j=0;j<ref1.length;j++){
+    //             if(document.getElementById(ref1[j]).value=='' ||document.getElementById(ref1[j]).value== null ){
+    //                 document.getElementsByClassName('ref_val1')[j].innerHTML='Required Field';
+    //                 flag=1;
+    //             }
+    //             else{
+    //                                 flag=0;
+    //                             }
+    //         }
+    //     }
+    //    }
+    // }
+
+    // function ref2_validation(){
+    //    for(let i=0; i<ref2.length;i++){
+    //     if(document.getElementById(ref2[i]).value!==''){
+    //         for(let j=0;j<ref2.length;j++){
+    //             if(document.getElementById(ref2[j]).value=='' ||document.getElementById(ref2[j]).value== null ){
+    //                 document.getElementsByClassName('ref_val2')[j].innerHTML='Required Field';
+    //                 flag=1;
+    //             }
+    //             else{
+    //                                 flag=0;
+    //                             }
+    //         }
+    //     }
+    //    }
+    // }
+
+    // function ref3_validation(){
+    //    for(let i=0; i<ref3.length;i++){
+    //     if(document.getElementById(ref3[i]).value!==''){
+    //         for(let j=0;j<ref3.length;j++){
+    //             if(document.getElementById(ref3[j]).value=='' ||document.getElementById(ref3[j]).value== null ){
+    //                 document.getElementsByClassName('ref_val3')[j].innerHTML='Required Field';
+    //                 flag=1;
+    //             }
+    //             else{
+    //                                 flag=0;
+    //                             }
+    //         }
+    //     }
+    //    }
+    // }
+
+    //----------------Prefrences---------------------------------
+
+            // function prefrences_validation(){
+            //             var pref_validate=['notice_period','expected_ctc','current_ctc'];
+            //             var display_validate=['Notice Period', 'Expected CTC','Current CTC'];
+            //             // console.log('SDCFSD',pref_validate);
+            //             for(var i=0;i<pref_validate.length;i++){
+            //             console.log('ASD',pref_validate.length);
+                        
+            //              str1=document.getElementById(pref_validate[i]);
+            //              console.log(str1);
+            //              if(str1.value.trim()=='' || str1.value.trim==null){
+            //                 document.getElementsByClassName('perf_validation')[i].innerHTML= display_validate[i]+" cannot be blank";
+            //                 // return false;
+            //                 flag=1;
+            //                 console.log(flag);
+            //             }                           
+            //             else{ 
+            //                 flag=0;
+            //                 document.getElementsByClassName('perf_validation')[i].innerHTML= "";
+            //                 console.log('0',flag);
+            //             }
+            //         }
+            //         // return true;
+            //         }
+
+                    // function blank_validation(){
+                    //     var validate=['first_name','last_name','designation_basic','address_1','phone','city'];
+                    //     var display=['First Name', 'Last Name','Designation','Address','Phone','City'];
+                    //     // console.log(validate.length);
+                    
+                    // for(var i=0;i<validate.length;i++){
+                    //     // console.log(validate);
+                    //      str=document.getElementById(validate[i]);
+                    //     //  console.log(str);
+                    //      if(str.value.trim()=='' || str.value.trim()==null){
+                    //         document.getElementsByClassName('validate_of')[i].innerHTML= display[i]+" cannot be blank";
+                    //         flag=1;
+                    //     }                           
+                    //     else{ 
+                    //         document.getElementsByClassName('validate_of')[i].innerHTML="";
+                    //         flag=0;
+                    //     }
+                    // }
+                    // // return true;
+                    // }
+
+
+
+
+
+    
+
+       
+
+                       
+
+                    //    function percentage(){
+                    //     var percentage_validate=['percentage','percentage_bc','percentage_hsc']
+
+                    //     for(let i=0;i<percentage_validate.length;i++){
+                    //     if(percentage_validate[i]=='percentage' || percentage_validate[i]=='percentage_bc' ||percentage_validate[i]=='percentage_hsc' ){
+                            
+                    //         var percentage_v=document.getElementById(percentage_validate[i]).value;
+                        
+                    //     if (!isNaN(percentage_v)){
+                    //                 document.getElementsByClassName('percentage_validation')[i].innerHTML= 'Enter the percentage';
+                    //             }
+                    //             flag=1;
+                    //         }
+                    //     }
+                    //    }
+                    
+                //        function name_not_null(){
+                //        var name_arr=['first_name','last_name'];
+                //        var display_name=['First Name', 'Last Name'];
+                //         for(var i=0; i<name_arr.length;i++){
+                //        if(name_arr[i]== 'first_name'|| name_arr[i]=='last_name'){
+                //                 var name_number=document.getElementById(name_arr[i]).value;
+                //                 if(!isNaN(name_number)){
+                //                     document.getElementsByClassName('not_number')[i].innerHTML= 'Enter '+display_name[i]+' in proper way';
+                //                 }
+                //                 flag=1;
+                //             }
+                //         }
+                // }
 
 
                   
