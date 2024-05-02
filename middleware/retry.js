@@ -1,7 +1,5 @@
-const dotenv=require("dotenv");
-const jwt=require("jsonwebtoken");
 
-dotenv.config();
+const jwt=require("jsonwebtoken");
 
 exports.retry=(req,res,next)=>{
     const token=req.cookies.access_token;
